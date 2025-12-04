@@ -16,7 +16,7 @@ class ActorSerializer(serializers.ModelSerializer):
         model = Actor
         fields = ('id', 'first_name', 'last_name', 'full_name')
 
-    def get_full_name(self, obj):
+    def get_full_name(self, obj) -> str:
         return f"{obj.first_name} {obj.last_name}"
 
 
@@ -80,7 +80,7 @@ class MovieSessionListSerializer(serializers.ModelSerializer):
             "cinema_hall_capacity",
         )
 
-    def get_cinema_hall_capacity(self, obj):
+    def get_cinema_hall_capacity(self, obj) -> int:
         return obj.cinema_hall.capacity
 
 

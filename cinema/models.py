@@ -53,7 +53,7 @@ class MovieSession(models.Model):
     class Meta:
         ordering = ["-show_time"]
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"{self.movie.title} {self.show_time}"
 
 
